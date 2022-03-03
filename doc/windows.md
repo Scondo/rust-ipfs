@@ -12,3 +12,9 @@ set OPENSSL_DIR=c:\Program Files\OpenSSL-Win64\
 3) Ok, now you can run ```cargo build --workspace```
 
 If you expirience problems like "libcrypto.dll not found" during tests or run check if you copy DLL in Windows system directory.
+
+For conformance test:
+1) Install nodejs with npm from https://nodejs.org/en/download/
+2) Run PowerShell as Administrator (e.g press Win+R, type `powershell`, press Ctrl+Shift+Enter and confirm UAC), then execute `Set-ExecutionPolicy RemoteSigned` to allow executing of local PowerShell scripts. (if you want to undo this action later check your current policy with `Get-ExecutionPolicy`)
+3) Run `cargo build -p ipfs-http` for 
+4) Run setup.ps1 with PowerShell. If you use cmd just run `powershell ./setup.ps1`.
